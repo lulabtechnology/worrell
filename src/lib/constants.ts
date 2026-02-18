@@ -20,7 +20,6 @@ export const NAV_LINKS = [
   { id: "dolor", label: "Riesgos" },
   { id: "soluciones", label: "Soluciones" },
   { id: "proceso", label: "Cómo trabajamos" },
-  { id: "aliados", label: "Aliados" },
   { id: "testimonios", label: "Testimonios" },
   { id: "faq", label: "FAQ" },
   { id: "contacto", label: "Contacto" }

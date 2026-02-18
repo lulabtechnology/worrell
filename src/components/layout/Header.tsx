@@ -10,25 +10,24 @@ import { ButtonLink } from "@/components/ui/Button";
 
 export function Header() {
   const [open, setOpen] = useState(false);
-
   const whatsappHref = useMemo(() => buildWhatsAppUrl(WHATSAPP_DEFAULT_MSG), []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#070A2B]/60 backdrop-blur-xl">
-      <Container className="flex items-center justify-between py-3 sm:py-4">
-        <a href="#top" className="flex items-center gap-2">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#070A2B]/65 backdrop-blur-xl">
+      <Container className="flex min-h-[80px] items-center justify-between py-5 sm:min-h-[96px] sm:py-6">
+        <a href="#top" className="flex items-center gap-3">
           <Logo variant="light" />
           <span className="sr-only">{BRAND.name}</span>
         </a>
 
-        <nav className="hidden items-center gap-7 md:flex" aria-label="Navegación principal">
+        <nav className="hidden items-center gap-9 md:flex lg:gap-10" aria-label="Navegación principal">
           {NAV_LINKS.map((l) => (
             <a
               key={l.id}
               href={`#${l.id}`}
               className={cn(
                 "relative text-sm text-white/75 transition hover:text-white",
-                "after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:rounded-full after:bg-white/80 after:transition-all after:duration-300 hover:after:w-full"
+                "after:absolute after:-bottom-2 after:left-0 after:h-[2px] after:w-0 after:rounded-full after:bg-white/80 after:transition-all after:duration-300 hover:after:w-full"
               )}
             >
               {l.label}
@@ -37,7 +36,7 @@ export function Header() {
         </nav>
 
         <div className="hidden md:block">
-          <ButtonLink href={whatsappHref} variant="secondary" size="sm">
+          <ButtonLink href={whatsappHref} variant="secondary" size="sm" className="px-6">
             {CTAS.primary}
           </ButtonLink>
         </div>
@@ -45,7 +44,7 @@ export function Header() {
         {/* Mobile */}
         <button
           className={cn(
-            "md:hidden rounded-2xl border border-white/14 bg-white/6 px-3 py-2 text-sm text-white",
+            "md:hidden rounded-2xl border border-white/14 bg-white/6 px-4 py-2.5 text-sm text-white",
             "hover:bg-white/10 transition"
           )}
           aria-expanded={open}
@@ -64,7 +63,7 @@ export function Header() {
           open ? "max-h-[560px]" : "max-h-0"
         )}
       >
-        <Container className="py-4">
+        <Container className="py-5">
           <div className="flex flex-col gap-3">
             {NAV_LINKS.map((l) => (
               <a
@@ -76,6 +75,7 @@ export function Header() {
                 {l.label}
               </a>
             ))}
+
             <ButtonLink href={whatsappHref} variant="primary" size="md" className="mt-2">
               {CTAS.primary}
             </ButtonLink>
@@ -85,3 +85,5 @@ export function Header() {
     </header>
   );
 }
+
+export default Header;

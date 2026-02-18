@@ -5,31 +5,11 @@ import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/motion/Reveal";
 
 const steps = [
-  {
-    k: "01",
-    title: "Diagnóstico",
-    desc: "Entendemos ingresos, deudas, dependientes y objetivos."
-  },
-  {
-    k: "02",
-    title: "Estrategia",
-    desc: "Estructuramos la cobertura ideal con respaldo técnico."
-  },
-  {
-    k: "03",
-    title: "Cotización y ajuste",
-    desc: "Comparas opciones, afinamos deducibles, sumas y alcance."
-  },
-  {
-    k: "04",
-    title: "Aprobación",
-    desc: "Acompañamiento durante todo el proceso de emisión."
-  },
-  {
-    k: "05",
-    title: "Seguimiento",
-    desc: "Post-emisión, reclamos y revisión anual de cobertura."
-  }
+  { k: "01", title: "Diagnóstico", desc: "Entendemos ingresos, deudas, dependientes y objetivos." },
+  { k: "02", title: "Estrategia", desc: "Estructuramos la cobertura ideal con respaldo técnico." },
+  { k: "03", title: "Cotización y ajuste", desc: "Comparas opciones, afinamos deducibles, sumas y alcance." },
+  { k: "04", title: "Aprobación", desc: "Acompañamiento durante todo el proceso de emisión." },
+  { k: "05", title: "Seguimiento", desc: "Post-emisión, reclamos y revisión anual de cobertura." }
 ];
 
 export function ProcessTimeline() {
@@ -38,9 +18,7 @@ export function ProcessTimeline() {
       <Container>
         <Reveal>
           <div className="text-xs font-semibold tracking-[0.22em] text-white/55">MÉTODO</div>
-          <h2 className="mt-3 font-display text-3xl text-white sm:text-4xl">
-            Cómo trabajamos
-          </h2>
+          <h2 className="mt-3 font-display text-3xl text-white sm:text-4xl">Cómo trabajamos</h2>
           <p className="mt-4 max-w-2xl text-white/70 sm:text-lg">
             Un proceso claro, con comunicación directa y decisiones informadas.
           </p>
@@ -55,16 +33,13 @@ export function ProcessTimeline() {
                 transition={{ duration: 0.6, ease: [0.21, 1, 0.21, 1], delay: idx * 0.06 }}
                 className="premium-ring glass rounded-3xl p-6"
               >
-                <div className="flex items-center justify-between">
-                  <div className="text-xs font-semibold tracking-[0.22em] text-white/55">
-                    PASO {s.k}
-                  </div>
-                  <div className="h-9 w-9 rounded-2xl border border-white/12 bg-white/6" />
+                <div className="text-xs font-semibold tracking-[0.22em] text-white/55">
+                  PASO {s.k}
                 </div>
+
                 <div className="mt-3 text-base font-semibold text-white">{s.title}</div>
                 <div className="mt-2 text-sm leading-relaxed text-white/70">{s.desc}</div>
 
-                {/* Subtle connector hint */}
                 <div className="mt-6 h-[2px] w-16 rounded-full bg-white/10" />
               </motion.div>
             ))}

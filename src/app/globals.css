@@ -62,7 +62,7 @@ body {
 }
 
 /* Evita que el header sticky tape secciones al hacer click en menú */
-section[id] { scroll-margin-top: 108px; }
+section[id] { scroll-margin-top: 132px; }
 
 /* Marquee (Aliados) */
 @keyframes worrell-marquee {

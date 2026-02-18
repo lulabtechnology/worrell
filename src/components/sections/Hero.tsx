@@ -11,8 +11,7 @@ export function Hero() {
   const waPrimary = buildWhatsAppUrl(WHATSAPP_DEFAULT_MSG);
 
   return (
-    <section className="relative overflow-hidden pt-20 sm:pt-24">
-      {/* Hero background media */}
+    <section className="relative overflow-hidden pt-28 sm:pt-32">
       <div className="absolute inset-0 -z-10">
         <ResponsivePicture
           desktopSrc={ASSETS.heroDesktop}
@@ -63,7 +62,6 @@ export function Hero() {
                 </ButtonLink>
               </div>
 
-              {/* Trust row */}
               <div className="mt-10 grid gap-3 sm:grid-cols-3">
                 <div className="premium-ring glass soft-shadow rounded-2xl px-4 py-4">
                   <div className="text-xs font-semibold tracking-[0.18em] text-white/55">EXPERIENCIA</div>
@@ -88,7 +86,6 @@ export function Hero() {
             </Reveal>
           </div>
 
-          {/* Right card */}
           <div className="lg:col-span-5">
             <Reveal delay={0.08}>
               <div className="premium-ring relative overflow-hidden rounded-3xl border border-white/12 bg-white/6 p-6 backdrop-blur-xl">

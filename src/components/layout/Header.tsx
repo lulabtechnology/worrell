@@ -24,12 +24,15 @@ export function Header() {
           <span className="sr-only">{BRAND.name}</span>
         </a>
 
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-7 md:flex" aria-label="Navegación principal">
           {NAV_LINKS.map((l) => (
             <a
               key={l.id}
               href={`#${l.id}`}
-              className="text-sm text-white/75 transition hover:text-white"
+              className={cn(
+                "relative text-sm text-white/75 transition hover:text-white",
+                "after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:rounded-full after:bg-white/80 after:transition-all after:duration-300 hover:after:w-full"
+              )}
             >
               {l.label}
             </a>
@@ -61,7 +64,7 @@ export function Header() {
         id="mobile-menu"
         className={cn(
           "md:hidden overflow-hidden border-t border-white/10 bg-[#070A2B]/70 backdrop-blur-xl",
-          open ? "max-h-[520px]" : "max-h-0"
+          open ? "max-h-[560px]" : "max-h-0"
         )}
       >
         <Container className="py-4">

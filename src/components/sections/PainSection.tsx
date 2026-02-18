@@ -74,20 +74,28 @@ export function PainSection() {
                   </div>
                 </div>
 
-                <div className="p-4">
-                  <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/20">
+                {/* MÁS AIRE AQUÍ */}
+                <div className="p-6">
+                  <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                    <div className="text-xs font-semibold tracking-[0.2em] text-white/55">VIDEO</div>
+                    <p className="mt-2 text-sm leading-relaxed text-white/70">
+                      Si lo prefieres, mira este mensaje breve antes de escribirnos.
+                    </p>
+                  </div>
+
+                  <div className="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-black/20">
                     <video className="block w-full" controls playsInline preload="metadata" poster={ASSETS.dolorPoster}>
                       <source src={ASSETS.dolorVideo} type="video/mp4" />
                       Tu navegador no soporta video HTML5.
                     </video>
                   </div>
 
-                  <p className="mt-4 text-sm leading-relaxed text-white/70">
+                  <p className="mt-6 text-sm leading-relaxed text-white/70">
                     Una conversación breve puede darte claridad sobre tu nivel actual de protección y qué estrategia
                     conviene según tu realidad financiera.
                   </p>
 
-                  <div className="mt-4">
+                  <div className="mt-5">
                     <ButtonLink href={wa} variant="secondary" size="md" className="w-full justify-center">
                       {CTAS.primary}
                     </ButtonLink>

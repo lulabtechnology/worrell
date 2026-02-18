@@ -17,6 +17,7 @@ export const CTAS = {
 } as const;
 
 export const NAV_LINKS = [
+  { id: "dolor", label: "Riesgos" },
   { id: "soluciones", label: "Soluciones" },
   { id: "proceso", label: "Cómo trabajamos" },
   { id: "aliados", label: "Aliados" },
@@ -29,14 +30,18 @@ export const NAV_LINKS = [
 export const ASSETS = {
   logoLight: "/brand/logo-light.png",
   logoDark: "/brand/logo-dark.png",
+
   heroDesktop: "/media/hero/hero-desktop.webp",
   heroMobile: "/media/hero/hero-mobile.webp",
   heroOverlay: "/media/hero/hero-overlay.webp",
+
   dolorDesktop: "/media/sections/dolor-desktop.webp",
   dolorMobile: "/media/sections/dolor-mobile.webp",
   dolorVideo: "/media/video/dolor.mp4",
   dolorPoster: "/media/video/dolor-poster.webp",
+
   serviciosDesktop: "/media/sections/servicios-desktop.webp",
   serviciosMobile: "/media/sections/servicios-mobile.webp",
+
   placeholder: "/media/placeholders/placeholder.webp"
 } as const;

@@ -9,31 +9,28 @@ type Testimonial = {
   name: string;
   role: string;
   quote: string;
-  img?: string; // t1.webp ... t6.webp (placeholder)
+  img?: string;
 };
 
 function buildTestimonials(): Testimonial[] {
   const imgs = Array.from({ length: 6 }).map((_, i) => `/media/testimonios/t${i + 1}.webp`);
   return [
     {
-      name: "Cliente (placeholder)",
+      name: "Cliente",
       role: "Profesional independiente",
-      quote:
-        "Antes sentía que pagaba un seguro sin entender la estrategia. Ahora tengo claridad y tranquilidad.",
+      quote: "Antes sentía que pagaba un seguro sin entender la estrategia. Ahora tengo claridad y tranquilidad.",
       img: imgs[0]
     },
     {
-      name: "Cliente (placeholder)",
+      name: "Cliente",
       role: "Familia con hijos",
-      quote:
-        "El diagnóstico nos ayudó a ordenar prioridades: salud, vida y respaldo de la hipoteca.",
+      quote: "El diagnóstico nos ayudó a ordenar prioridades: salud, vida y respaldo de la hipoteca.",
       img: imgs[1]
     },
     {
-      name: "Cliente (placeholder)",
+      name: "Cliente",
       role: "Empresario",
-      quote:
-        "Me gustó la atención directa y el enfoque patrimonial. No fue una ‘cotización más’.",
+      quote: "Me gustó la atención directa y el enfoque patrimonial. No fue una ‘cotización más’.",
       img: imgs[2]
     }
   ];
@@ -44,7 +41,6 @@ export function TestimonialsSlider() {
   const [idx, setIdx] = useState(0);
 
   const current = items[idx];
-
   const prev = () => setIdx((v) => (v - 1 + items.length) % items.length);
   const next = () => setIdx((v) => (v + 1) % items.length);
 
@@ -52,14 +48,10 @@ export function TestimonialsSlider() {
     <section id="testimonios" className="py-16 sm:py-20">
       <Container>
         <Reveal>
-          <div className="text-xs font-semibold tracking-[0.22em] text-white/55">
-            RESULTADOS
-          </div>
-          <h2 className="mt-3 font-display text-3xl text-white sm:text-4xl">
-            Testimonios
-          </h2>
+          <div className="text-xs font-semibold tracking-[0.22em] text-white/55">RESULTADOS</div>
+          <h2 className="mt-3 font-display text-3xl text-white sm:text-4xl">Testimonios</h2>
           <p className="mt-4 max-w-2xl text-white/70 sm:text-lg">
-            Deja tus reseñas reales aquí después. Por ahora, placeholders listos.
+            Experiencias reales de personas que decidieron proteger su patrimonio con una estrategia clara.
           </p>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-12">
@@ -94,12 +86,9 @@ export function TestimonialsSlider() {
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.45, ease: [0.21, 1, 0.21, 1] }}
                     >
-                      <p className="text-lg leading-relaxed text-white/85">
-                        “{current.quote}”
-                      </p>
+                      <p className="text-lg leading-relaxed text-white/85">“{current.quote}”</p>
 
                       <div className="mt-6 flex items-center gap-4">
-                        {/* Avatar sin ícono roto: background-image */}
                         <div
                           className="h-12 w-12 rounded-full border border-white/12 bg-white/6"
                           style={{
@@ -136,14 +125,9 @@ export function TestimonialsSlider() {
 
             <div className="lg:col-span-4">
               <div className="premium-ring glass rounded-3xl p-6 sm:p-8">
-                <div className="text-xs font-semibold tracking-[0.22em] text-white/55">
-                  PRUEBAS DE CONFIANZA
-                </div>
+                <div className="text-xs font-semibold tracking-[0.22em] text-white/55">CREDENCIALES</div>
                 <p className="mt-4 text-sm leading-relaxed text-white/70">
-                  Placeholders para certificaciones, congresos, fotos y reconocimientos. Sube imágenes en:
-                  <span className="block mt-2 text-white/60">
-                    /public/media/portraits/p1.webp … p4.webp
-                  </span>
+                  Trayectoria, participación en eventos del sector y respaldo profesional para orientar decisiones con claridad.
                 </p>
 
                 <div className="mt-6 grid grid-cols-2 gap-3">

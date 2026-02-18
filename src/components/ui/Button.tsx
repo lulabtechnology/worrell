@@ -35,10 +35,12 @@ export function ButtonLink({
   target?: "_blank" | "_self";
 }) {
   const isExternal = href.startsWith("http") || href.startsWith("https");
+
   return (
     <Link
       href={href}
       target={target ?? (isExternal ? "_blank" : "_self")}
+      rel={isExternal ? "noreferrer" : undefined}
       className={cn(
         "inline-flex items-center justify-center gap-2 rounded-2xl font-medium transition-all",
         "focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4FD1FF] focus-visible:ring-offset-2 focus-visible:ring-offset-[#070A2B]",

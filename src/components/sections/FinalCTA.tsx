@@ -79,14 +79,12 @@ export function FinalCTA() {
             />
             <div className="relative grid gap-10 lg:grid-cols-12">
               <div className="lg:col-span-7">
-                <div className="text-xs font-semibold tracking-[0.22em] text-white/55">
-                  CTA FINAL
-                </div>
+                <div className="text-xs font-semibold tracking-[0.22em] text-white/55">CTA FINAL</div>
                 <h3 className="mt-3 font-display text-3xl text-white sm:text-4xl">
                   ¿Listo para evaluar tu nivel de protección?
                 </h3>
                 <p className="mt-4 max-w-xl text-white/70 sm:text-lg">
-                  Responde 30 segundos y abre WhatsApp con un mensaje inteligente. Sin formularios “fríos”, sin backend.
+                  Te toma menos de un minuto. Escríbenos y empezamos con un diagnóstico breve para definir la estrategia.
                 </p>
 
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -114,9 +112,7 @@ export function FinalCTA() {
 
               <div className="lg:col-span-5">
                 <form onSubmit={onSubmit} className="premium-ring glass rounded-3xl p-6 sm:p-7">
-                  <div className="text-xs font-semibold tracking-[0.22em] text-white/55">
-                    MINI FORM INTELIGENTE
-                  </div>
+                  <div className="text-xs font-semibold tracking-[0.22em] text-white/55">FORMULARIO RÁPIDO</div>
 
                   <label className="mt-4 block text-sm text-white/75">
                     Nombre
@@ -194,17 +190,12 @@ export function FinalCTA() {
                     type="submit"
                     className="mt-5 inline-flex h-12 w-full items-center justify-center rounded-2xl bg-[#000090] px-6 text-sm font-medium text-white shadow-[0_14px_40px_rgba(0,0,144,.28)] transition hover:bg-[#0B0FC2] active:translate-y-[1px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4FD1FF] focus-visible:ring-offset-2 focus-visible:ring-offset-[#05071f]"
                   >
-                    Abrir WhatsApp con mi diagnóstico
+                    Enviar por WhatsApp
                   </button>
 
-                  <p className="mt-3 text-xs text-white/60">
-                    Esto abre WhatsApp usando: https://wa.me/ + tu número y un mensaje prellenado.
-                  </p>
-
-                  {/* fallback link */}
                   <div className="mt-3">
                     <ButtonLink href={waForm} variant="ghost" size="sm" className="w-full justify-center">
-                      Ver enlace de WhatsApp (fallback)
+                      Si no se abre WhatsApp, toca aquí
                     </ButtonLink>
                   </div>
                 </form>

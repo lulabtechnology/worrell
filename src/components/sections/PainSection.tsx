@@ -22,9 +22,7 @@ export function PainSection() {
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <Reveal>
-              <div className="text-xs font-semibold tracking-[0.22em] text-white/55">
-                RIESGOS REALES
-              </div>
+              <div className="text-xs font-semibold tracking-[0.22em] text-white/55">RIESGOS REALES</div>
               <h2 className="mt-3 font-display text-3xl leading-tight text-white sm:text-4xl">
                 Cuando no hay un plan, lo urgente se vuelve caro.
               </h2>
@@ -58,7 +56,6 @@ export function PainSection() {
           <div className="lg:col-span-5">
             <Reveal delay={0.06}>
               <div className="premium-ring overflow-hidden rounded-3xl border border-white/12 bg-white/6 backdrop-blur-xl">
-                {/* Visual (imagen opcional de la sección) */}
                 <div className="relative h-56 sm:h-64">
                   <ResponsivePicture
                     desktopSrc={ASSETS.dolorDesktop}
@@ -70,34 +67,24 @@ export function PainSection() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#05071f]/85 via-[#05071f]/25 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4">
-                    <div className="text-sm font-semibold text-white">
-                      Video: explicación del riesgo financiero
-                    </div>
+                    <div className="text-sm font-semibold text-white">Mensaje clave</div>
                     <div className="mt-1 text-xs text-white/65">
-                      Placeholder listo: /public/media/video/dolor.mp4
+                      Entiende el riesgo y decide con claridad antes de que sea tarde.
                     </div>
                   </div>
                 </div>
 
-                {/* Video real */}
                 <div className="p-4">
                   <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/20">
-                    <video
-                      className="block w-full"
-                      controls
-                      playsInline
-                      preload="metadata"
-                      poster={ASSETS.dolorPoster}
-                    >
+                    <video className="block w-full" controls playsInline preload="metadata" poster={ASSETS.dolorPoster}>
                       <source src={ASSETS.dolorVideo} type="video/mp4" />
                       Tu navegador no soporta video HTML5.
                     </video>
                   </div>
 
                   <p className="mt-4 text-sm leading-relaxed text-white/70">
-                    <span className="font-semibold text-white">Texto placeholder:</span>{" "}
-                    Aquí irá un copy breve del video (cuando compartas la transcripción), resaltando por qué un
-                    diagnóstico financiero define la estrategia de protección.
+                    Una conversación breve puede darte claridad sobre tu nivel actual de protección y qué estrategia
+                    conviene según tu realidad financiera.
                   </p>
 
                   <div className="mt-4">

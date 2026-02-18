@@ -11,7 +11,7 @@ export function Hero() {
   const waPrimary = buildWhatsAppUrl(WHATSAPP_DEFAULT_MSG);
 
   return (
-    <section className="relative overflow-hidden pt-14 sm:pt-18">
+    <section className="relative overflow-hidden pt-20 sm:pt-24">
       {/* Hero background media */}
       <div className="absolute inset-0 -z-10">
         <ResponsivePicture
@@ -20,7 +20,7 @@ export function Hero() {
           alt="WORRELL — fondo hero"
           priority
           className="h-full w-full"
-          imgClassName="h-[860px] w-full object-cover opacity-[0.33] sm:h-[860px]"
+          imgClassName="h-[860px] w-full object-cover opacity-[0.33] sm:h-[900px]"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#070A2B]/30 via-[#070A2B]/75 to-[#05071f]" />
@@ -66,9 +66,7 @@ export function Hero() {
               {/* Trust row */}
               <div className="mt-10 grid gap-3 sm:grid-cols-3">
                 <div className="premium-ring glass soft-shadow rounded-2xl px-4 py-4">
-                  <div className="text-xs font-semibold tracking-[0.18em] text-white/55">
-                    EXPERIENCIA
-                  </div>
+                  <div className="text-xs font-semibold tracking-[0.18em] text-white/55">EXPERIENCIA</div>
                   <div className="mt-2 text-sm text-white/90">
                     <span className="text-white">
                       <CountUp to={19} suffix="+" />
@@ -78,21 +76,13 @@ export function Hero() {
                 </div>
 
                 <div className="premium-ring glass soft-shadow rounded-2xl px-4 py-4">
-                  <div className="text-xs font-semibold tracking-[0.18em] text-white/55">
-                    ESTRATEGIA
-                  </div>
-                  <div className="mt-2 text-sm text-white/90">
-                    Diagnóstico y propuesta a tu medida
-                  </div>
+                  <div className="text-xs font-semibold tracking-[0.18em] text-white/55">ESTRATEGIA</div>
+                  <div className="mt-2 text-sm text-white/90">Diagnóstico y propuesta a tu medida</div>
                 </div>
 
                 <div className="premium-ring glass soft-shadow rounded-2xl px-4 py-4">
-                  <div className="text-xs font-semibold tracking-[0.18em] text-white/55">
-                    SOPORTE
-                  </div>
-                  <div className="mt-2 text-sm text-white/90">
-                    Post-emisión, reclamos y revisión anual
-                  </div>
+                  <div className="text-xs font-semibold tracking-[0.18em] text-white/55">SOPORTE</div>
+                  <div className="mt-2 text-sm text-white/90">Post-emisión, reclamos y revisión anual</div>
                 </div>
               </div>
             </Reveal>
@@ -136,7 +126,7 @@ export function Hero() {
                       {CTAS.alt3}
                     </ButtonLink>
                     <p className="mt-3 text-xs text-white/60">
-                      Sin backend. Todo abre WhatsApp con mensaje prellenado.
+                      Respuesta rápida. Atención directa por WhatsApp.
                     </p>
                   </div>
                 </div>
@@ -145,7 +135,6 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Spacer */}
         <div className="h-12 sm:h-16" />
       </Container>
     </section>
